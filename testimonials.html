@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials - Nidhi Developers</title>
+    <link rel="stylesheet" href="nav.css" />
+    <style>
+      .testimonials-intro {
+        text-align: center;
+        padding: 6rem 2rem 4rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .testimonials-intro h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #5a5757, #1a1818);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .testimonials-intro p {
+        font-size: 1.2rem;
+        color: #5a5757;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem 5rem 5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        padding: 2rem;
+        transition: all 0.3s ease;
+      }
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .quote-mark {
+        font-size: 4rem;
+        color: rgb(75, 75, 75);
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+      .testimonial-content p {
+        color: #3e3e3e;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .author-info h4 {
+        color: #000000;
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+      }
+      .author-info p {
+        color: #494949;
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      @media (max-width: 768px) {
+        header {
+          padding: 1rem 0.5rem;
+        }
+
+        .content {
+          margin-top: 85%;
+        }
+
+        .robot-3d {
+          scale: 0.3;
+          top: -30%;
+          right: 2%;
+          height: 100%;
+          width: 100%;
+        }
+
+        .testimonials-grid {
+                  grid-template-columns: repeat(1, minmax(300px, 1fr));
+
+          /* padding: 2rem 1rem; */
+        }
+
+        .testimonials-intro h1 {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Background Elements -->
+      <img src="gradient.png" alt="" class="image-gradient" />
+      <div class="layer-blur"></div>
+
+      <!-- Header Section -->
+      <header>
+        <h1 class="logo">Nidhi Developers</h1>
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">HOME</a>
+          <a href="work.html">WORK</a>
+          <a href="services.html">SERVICES</a>
+          <a href="testimonials.html">TESTIMONIALS</a>
+          <a href="contact.html">CONTACT</a>
+        </nav>
+      </header>
+
+      <!-- Intro Section -->
+      <section class="testimonials-intro">
+        <h1>What Our Clients Say</h1>
+        <p>
+          Discover why thousands of customers trust us with their scratch card
+          solutions.
+        </p>
+      </section>
+
+      <!-- Testimonials Grid -->
+      <section class="testimonials-grid">
+        <!-- Testimonial Card 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="quote-mark">"</div>
+            <p>
+              Working with Nidhi Developers was an excellent experience. Their
+              scratch cards helped us increase customer engagement by 200%.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>John Smith</h4>
+                <p>Marketing Director, TechCorp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="quote-mark">"</div>
+            <p>
+              The quality and security features of their scratch cards are
+              unmatched. We've been using their services for over 5 years now.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Sarah Johnson</h4>
+                <p>CEO, Retail Solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="quote-mark">"</div>
+            <p>
+              Excellent customer service and quick turnaround times. The scratch
+              cards were delivered ahead of schedule.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Michael Chen</h4>
+                <p>Operations Manager, Global Events</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 4 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="quote-mark">"</div>
+            <p>
+              The innovative designs and customization options helped us stand
+              out in the market. Highly recommended!
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Emma Davis</h4>
+                <p>Brand Manager, Creative Solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>All rights reserved by Nidhi Developers</footer>
+  </body>
+  <script>
+    // Hamburger menu functionality
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+      });
+    });
+  </script>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="nav.css" />
+    <title>HOME - Nidhi Developers</title>
+    <style>
+      .spline-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        pointer-events: none;
+      }
+
+      .image-gradient {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0.5;
+        z-index: -1;
+      }
+
+      .layer-blur {
+        height: 0;
+        width: 30rem;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        box-shadow: 0 0 700px 15px white;
+        rotate: -30deg;
+        z-index: -1;
+      }
+
+      .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-container {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+
+      .about .about-container h2 {
+        font-size: 4rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        margin: 2rem 0;
+        line-height: 1.2;
+        text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+      }
+
+      .p {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .left-p,
+      .right-p {
+        font-size: 1.2rem;
+        letter-spacing: 0.05em;
+        color: gray;
+      }
+
+      .stats-section {
+        position: relative;
+        margin: 3rem auto;
+        max-width: 1200px;
+        border-radius: 1rem;
+        overflow: hidden;
+        min-height: 400px;
+      }
+
+      .stats-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .stats-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 4rem 5rem;
+        background: rgba(255, 254, 254, 0.5);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: 100vh;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 1rem;
+        min-width: 200px;
+        transition: transform 0.3s ease;
+      }
+
+      .stat-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .stat-number {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #000000;
+        margin-bottom: 0.5rem;
+        background: #000000;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .stat-label {
+        display: block;
+        font-size: 1rem;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 2rem 5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .bento-item {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(54, 52, 52, 0.918);
+        border-radius: 1rem;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .bento-item:nth-child(1) {
+        grid-column: span 2;
+      }
+
+      .bento-item:nth-child(4) {
+        grid-column: span 2;
+      }
+
+      .bento-item h3 {
+        color: #000000;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        position: relative;
+      }
+
+      .bento-item p {
+        color: #a0a0a0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .bento-item:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 768px) {
+        .bento-grid {
+          grid-template-columns: 1fr;
+          padding: 1rem;
+        }
+
+        .bento-item:nth-child(1),
+        .bento-item:nth-child(4) {
+          grid-column: span 1;
+        }
+        .robot-3d{
+          width: 0;
+          height: 0;
+        }
+      }
+
+      .btn-signing {
+        background-color: #a7a7a7;
+        color: black;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        border: none;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: backgroud-color 0.2s ease;
+        cursor: pointer;
+      }
+
+      .btn-signing:hover {
+        background-color: white;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: calc(90vh - 6rem);
+      }
+
+      .content {
+        max-width: 40rem;
+        margin-left: 10%;
+        z-index: 999;
+      }
+
+      .content h1 {
+        font-size: 4rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        margin: 2rem 0;
+        line-height: 1.2;
+        text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+      }
+
+      .description {
+        font-size: 1.2rem;
+        letter-spacing: 0.05em;
+        max-width: 35rem;
+        color: gray;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 3rem;
+      }
+
+      .btn-get-started {
+        text-decoration: none;
+        border: 1px solid #2a2a2a;
+        padding: 0.7rem 1.2rem;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        transition: background-color 0.2s ease;
+      }
+
+      .btn-get-started:hover {
+        background-color: #1a1a1a;
+      }
+
+      .btn-signing-main {
+        text-decoration: none;
+        background-color: lightgray;
+        color: black;
+        padding: 0.6rem 2.5rem;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        transition: background-color 0.2s ease;
+      }
+
+      .btn-signing-main:hover {
+        background-color: gray;
+      }
+
+      .robot-3d {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        top: -25%;
+        scale: 0.3;
+        /* height: 80%;width: 80%; */
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const statsSection = entry.target;
+            const numbers = statsSection.querySelectorAll(".stat-number");
+
+            numbers.forEach((number) => {
+              const target = parseInt(number.dataset.target);
+              animateNumber(number, target);
+            });
+
+            observer.unobserve(statsSection);
+          }
+        });
+      }, observerOptions);
+
+      function animateNumber(element, target) {
+        let current = 0;
+        const duration = 2000; // Animation duration in milliseconds
+        const steps = 50; // Number of steps in the animation
+        const increment = target / steps;
+        const stepTime = duration / steps;
+
+        const updateNumber = () => {
+          current += increment;
+          if (current <= target) {
+            element.textContent = Math.round(current) + "+";
+            setTimeout(updateNumber, stepTime);
+          } else {
+            element.textContent = target + "+";
+          }
+        };
+
+        updateNumber();
+      }
+
+      // Start observing when the DOM is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        const statsSection = document.querySelector(".stats-section");
+        if (statsSection) {
+          observer.observe(statsSection);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <!-- <img class="image-gradient" src="gradient.png" alt="gradient" /> -->
+    <div class="layer-blur"></div>
+
+    <div class="container">
+      <header>
+        <h1 class="logo">Nidhi Developers</h1>
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">HOME</a>
+          <a href="work.html">WORK</a>
+          <a href="services.html">SERVICES</a>
+          <a href="testimonials.html">TESTIMONIALS</a>
+          <a href="contact.html">CONTACT</a>
+        </nav>
+
+        <!-- <button class="btn-signing">SIGNING</button> -->
+      </header>
+      <main>
+        <div class="content">
+          <div class="tag-box">
+            <div class="tag">INTODUCING NIDHI DEVEOPERS &wedbar;</div>
+          </div>
+          <h1>NAMASTE 🙏</h1>
+
+          <p class="description">
+            I’m Asmit Saxena, CEO of Nidhi Developers — a company dedicated to
+            crafting powerful, growth-driven websites for modern businesses.
+          </p>
+
+          <div class="buttons">
+            <!-- <a href="" class="btn-get-started">Scratch Card &gt;</a> -->
+            <a href="" class="btn-signing-main">Start Now !! &gt;</a>
+          </div>
+        </div>
+      </main>
+
+      <!-- <spline-viewer class="robot-3d" url="https://prod.spline.design/Asa8I5PAdV6C7Nji/scene.splinecode"></spline-viewer> -->
+
+      <!-- <spline-viewer class="robot-3d" url="https://prod.spline.design/n0QZV5C8YDhTpkwX/scene.splinecode"></spline-viewer> -->
+
+      <spline-viewer
+        class="robot-3d"
+        url="https://prod.spline.design/zSGAfBbZtCdEc34R/scene.splinecode"
+      ></spline-viewer>
+
+      <div class="about">
+        <div class="about-container">
+          <h2>About Us</h2>
+          <div class="p">
+            <div class="left-p">
+              At Nidhi Developers, we help businesses grow with modern and
+              result-driven web design, web development, and digital solutions.
+              As a trusted IT company in India, we specialize in creating
+              powerful websites, dynamic applications, and online platforms that
+              enhance brand visibility and drive customer engagement.
+            </div>
+            <div class="right-p">
+              Our team of skilled web developers, creative designers, and
+              digital experts work together to deliver innovative solutions
+              tailored to your business needs. Whether you run a parlor, gym,
+              restaurant, hotel, or startup, we build websites that not only
+              look professional but also convert visitors into customers.
+            </div>
+          </div>
+
+          <section class="bento-grid">
+            <div class="bento-item">
+              <h3>Web Development</h3>
+              <p>
+                Custom web solutions with modern technologies including CMS,
+                E-commerce, and full-stack development using Node.js, Angular,
+                and React.
+              </p>
+            </div>
+            <div class="bento-item">
+              <h3>Digital Marketing</h3>
+              <p>
+                Comprehensive digital marketing services including SEO, SEM,
+                social media, email marketing, and analytics consultation.
+              </p>
+            </div>
+            <div class="bento-item">
+              <h3>Video Production</h3>
+              <p>
+                High-quality video content creation including explainer videos,
+                2D/3D animations, whiteboard animations, and motion graphics.
+              </p>
+            </div>
+            <div class="bento-item">
+              <h3>Interface Design</h3>
+              <p>
+                User-centered interface design with focus on usability,
+                aesthetics, and seamless user experience across all devices.
+              </p>
+            </div>
+            <!-- <div class="bento-item">
+          <h3>Branding</h3>
+          <p>Complete branding solutions including logo design, brand identity, package design, infographics, and creative copywriting.</p>
+        </div> -->
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <section class="stats-section">
+      <img src="assets/statsbg.jpg" class="stats-bg" alt="" srcset="" />
+      <!-- <spline-viewer
+        class="stats-bg"
+        url="https://prod.spline.design/GJlUaiZ7PHtBqvMk/scene.splinecode"
+      ></spline-viewer> -->
+      <div class="stats-content">
+        <div class="stat-item">
+          <span class="stat-number" data-target="10">0</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="100">0</span>
+          <span class="stat-label">Clients Dealed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-label">Website Work</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="2">0</span>
+          <span class="stat-label">Content Creation Work</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>All rights reserved by Nidhi Developers</footer>
+  </body>
+  <script>
+    // Hamburger menu functionality
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+      });
+    });
+  </script>
+  <script
+    type="module"
+    src="https://unpkg.com/@splinetool/viewer@1.10.72/build/spline-viewer.js"
+  ></script>
+</html>

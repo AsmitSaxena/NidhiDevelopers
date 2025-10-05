@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Nidhi Developers</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="nav.css" />
+    <style>
+      .services-intro {
+        text-align: center;
+        padding: 6rem 2rem 4rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .services-intro .section-title {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #676767, #2d2d2d);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .services-intro .section-subtitle {
+        font-size: 1.2rem;
+        color: #555555;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .services-content {
+        padding: 2rem 5rem 5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .service-item {
+        display: flex;
+        margin-bottom: 4rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        padding: 2.5rem;
+        transition: all 0.3s ease;
+      }
+      .service-item:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .service-heading {
+        flex: 0 0 30%;
+        padding-right: 2rem;
+      }
+      .service-heading h2 {
+        font-size: 1.8rem;
+        color: #393939;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #4e4e4e, #1f1f1f);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .service-details {
+        flex: 0 0 70%;
+      }
+      .service-details p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #343434;
+      }
+      @media (max-width: 768px) {
+        .services-content {
+          padding: 2rem 1rem;
+        }
+
+        .service-item {
+          flex-direction: column;
+          padding: 1.5rem;
+        }
+
+        .service-heading {
+          flex: 0 0 100%;
+          padding-right: 0;
+          margin-bottom: 1.5rem;
+        }
+
+        .service-details {
+          flex: 0 0 100%;
+        }
+      }
+    </style>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.10.74/build/spline-viewer.js"
+    ></script>
+  </head>
+  <body>
+    <!-- <spline-viewer
+      url="https://prod.spline.design/CggzeEJYavhxuWa0/scene.splinecode"
+      class="spline-background"
+    ></spline-viewer> -->
+    <img src="gradient.png" alt="" class="image-gradient" />
+    <div class="layer-blur"></div>
+
+    <!-- Header Section -->
+    <header>
+      <h1 class="logo">Nidhi Developers</h1>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="work.html">WORK</a>
+        <a href="services.html">SERVICES</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="services-intro">
+      <div class="container">
+        <h1 class="section-title">Our Services</h1>
+        <p class="section-subtitle">
+          Comprehensive Solutions for Your Real Estate Needs
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Content -->
+    <section class="services-content">
+      <div class="container">
+        <!-- Service 1 -->
+        <div class="service-item">
+          <div class="service-heading">
+            <h2>Web Development</h2>
+          </div>
+          <div class="service-details">
+            <p>
+              Cross-browser and cross-device compatibility driven by mobile
+              responsiveness all under one roof Starting from basic website
+              designs, including CMS and online store building to highly complex
+              business website apps and design solutions, we will customize the
+              best of web development solutions for you.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-item">
+          <div class="service-heading">
+            <h2>Digital marketing</h2>
+          </div>
+          <div class="service-details">
+            <p>
+              Developing a long-term and reliable marketing strategy that will
+              flourish and live a longer life, while ensuring your customers
+              stay with you and tell the world the tales of your business’s
+              awesomeness transforming our custom-made business strategies into
+              real time success.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-item">
+          <div class="service-heading">
+            <h2>Branding</h2>
+          </div>
+          <div class="service-details">
+            <p>
+              Crafting a brand identity for your business that will convey your
+              intention, goals and all that you intend to do for your audience -
+              embedded inside a single design - connecting your business with
+              your customers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-item">
+          <div class="service-heading">
+            <h2>Interface Design</h2>
+          </div>
+          <div class="service-details">
+            <p>
+              Creative, attractive, engaging and usable interfaces are the soul
+              of any designs. We will help design custom user interfaces based
+              on your business requirements for any of your device platforms,
+              including mobile apps, tablets, desktops and KIOSKS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>All rights reserved by Nidhi Developers</footer>
+    <script>
+      // Hamburger menu functionality
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when clicking a link
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

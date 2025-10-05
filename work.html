@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="nav.css" />
+    <title>Work - Nidhi Developers</title>
+    <style>
+      .work-intro {
+        padding: 4rem 5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-top: 10%;
+        text-align: left;
+      }
+      .work-content {
+        max-width: 600px;
+      }
+      .work-intro {
+        text-align: center;
+        padding: 40px 20px;
+      }
+      .description {
+        max-width: 800px;
+        margin: 20px auto;
+        line-height: 1.6;
+        text-align: justify;
+      }
+      .work-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem 5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgb(60, 59, 59);
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgb(70, 70, 70);
+      }
+      .card-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+      }
+      .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card-content {
+        padding: 1.5rem;
+      }
+      .card-content h3 {
+        color: #000000;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+      .card-link {
+        color: #4a4949;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: opacity 0.3s ease;
+      }
+      .card-link:hover {
+        opacity: 0.8;
+      }
+      .work-3d {
+        position: fixed;
+        top: 0;
+        right: -35%;
+        top: 5%;
+        scale: 1.2;
+        z-index: -1;
+        /* height: 80%;width: 80%; */
+      }
+      @media (max-width: 768px) {
+        .work-3d {
+          height: 0;
+          width: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img class="image-gradient" src="gradient.png" alt="gradient" />
+    <div class="layer-blur"></div>
+
+    <div class="container">
+      <header>
+        <h1 class="logo">Nidhi Developers</h1>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">HOME</a>
+          <a href="work.html">WORK</a>
+          <a href="services.html">SERVICES</a>
+          <a href="testimonials.html">TESTIMONIALS</a>
+          <a href="contact.html">CONTACT</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="work-intro">
+          <div class="work-content">
+            <!-- <div class="tag-box">
+              <div class="tag">OUR PROJECTS &wedbar;</div>
+            </div> -->
+            <h1>Our Latest Work</h1>
+            <p class="description">
+              Discover our portfolio of exceptional projects that showcase our
+              commitment to quality, innovation, and customer satisfaction. Each
+              project represents our dedication to creating spaces that inspire
+              and endure.
+            </p>
+          </div>
+          <spline-viewer
+            class="work-3d"
+            url="https://prod.spline.design/Jjj3Uo3bNQ9-eTOZ/scene.splinecode"
+          ></spline-viewer>
+        </section>
+
+        <section class="work-cards">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/NidhiDevelopers.png" alt="Project 1" />
+            </div>
+            <div class="card-content">
+              <h3>Nidhi Developers</h3>
+              <!-- <p>Modern living spaces with premium amenities and sophisticated design.</p> -->
+              <a href="#" class="card-link">Learn More &gt;</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/RakshaNivesh.png" alt="Project 2" />
+            </div>
+            <div class="card-content">
+              <h3>Raksha Nivesh</h3>
+              <!-- <p>State-of-the-art business spaces designed for success.</p> -->
+              <a href="#" class="card-link">Learn More &gt;</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/LuvKushBakery.png" alt="Project 3" />
+            </div>
+            <div class="card-content">
+              <h3>Luv Kush Bakery</h3>
+              <!-- <p>Exclusive gated community with luxury villas and premium amenities.</p> -->
+              <a href="#" class="card-link">Learn More &gt;</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/uvpFoundation.png" alt="Project 3" />
+            </div>
+            <div class="card-content">
+              <h3>UVP Foundation</h3>
+              <!-- <p>Exclusive gated community with luxury villas and premium amenities.</p> -->
+              <a href="#" class="card-link">Learn More &gt;</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/makeupByVanshika.png" alt="Project 3" />
+            </div>
+            <div class="card-content">
+              <h3>Make-up By Vanshika</h3>
+              <!-- <p>Exclusive gated community with luxury villas and premium amenities.</p> -->
+              <a href="#" class="card-link">Learn More &gt;</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/motherBakers.png" alt="Project 3" />
+            </div>
+            <div class="card-content">
+              <h3>Mother Bakers</h3>
+              <!-- <p>Exclusive gated community with luxury villas and premium amenities.</p> -->
+              <a href="#" class="card-link">Learn More &gt;</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/PawFect.png" alt="Project 3" />
+            </div>
+            <div class="card-content">
+              <h3>PawFect Family</h3>
+              <!-- <p>Exclusive gated community with luxury villas and premium amenities.</p> -->
+              <a href="#" class="card-link">Learn More &gt;</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/PerfectGlam.png" alt="Project 3" />
+            </div>
+            <div class="card-content">
+              <h3>Perfect Glam</h3>
+              <!-- <p>Exclusive gated community with luxury villas and premium amenities.</p> -->
+              <a href="#" class="card-link">Learn More &gt;</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/urbanEvents.png" alt="Project 3" />
+            </div>
+            <div class="card-content">
+              <h3>Urban Events</h3>
+              <!-- <p>Exclusive gated community with luxury villas and premium amenities.</p> -->
+              <a href="#" class="card-link">Learn More &gt;</a>
+            </div>
+          </div>
+          
+        </section>
+      </main>
+    </div>
+    <footer>All rights reserved by Nidhi Developers</footer>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/@splinetool/viewer@1.10.74/build/spline-viewer.js"
+  ></script>
+  <script>
+    // Hamburger menu functionality
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+      });
+    });
+  </script>
+</html>
